@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class hole : MonoBehaviour
 {
-    private GameObject hole1;
+    public GameObject hole1;
+    public GameObject hole2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +17,18 @@ public class hole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    /*    if (Input.GetKeyDown(KeyCode.Q))
+      if (Input.GetKeyDown(KeyCode.Q))
         {
 
-            Destroy(gameObject);
+            Destroy(hole1);
+            
+        }
+       /* if (Input.GetKeyDown(KeyCode.E))
+        {
+            Instantiate(hole2);
         }*/
-
+      
+      
     }
 
   
