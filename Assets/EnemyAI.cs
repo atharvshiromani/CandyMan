@@ -1,11 +1,16 @@
-﻿using UnityEngine;
+﻿aiusing UnityEngine;
 using System.Collections;
 using Pathfinding;
 
 [RequireComponent (typeof (Rigidbody2D))]
 [RequireComponent (typeof (Seeker))]
 public class EnemyAI : MonoBehaviour {
-     public Transform target;
+     public Transform player;
+     public Transform patrolA;
+     public Transform patrolB;
+
+     private string targetstr;
+     private Transform target;
 
      // Update path per second
      public float updateRate = 2f;
@@ -28,34 +33,35 @@ public class EnemyAI : MonoBehaviour {
      // Current target waypoint
      private int currentWaypoint = 0;
 
-     // Has the enemy seen the player or not
-     private bool seenPlayer = false;
+     // Player tracking during patrolling
+     private float followThreshold = 2.5f;
 
      void Start() {
           seeker = GetComponent<Seeker>();
           rb = GetComponent<Rigidbody2D>();
 
-          if(target == null) {
-               Debug.LogError("No target set.");
+          if(player == null) {
+               Debug.LogError("No player set.");
                return;
           }
 
-          //TODO: Finish seenTarget and get rid of this line
-          seenPlayer = true;
+        if (patrolA == null) {
+            Debug.LogError("No patrolA set.");
+            return;
+        }
+
+        if (patrolB == null) {
+            Debug.LogError("No patrolB set.");
+            return;
+        }
+
+        targetstr = "A";
+          target = patrolA;
 
           // Find a path to the target, then return to OnPathComplete
           seeker.StartPath(transform.position, target.position, OnPathComplete);
 
           StartCoroutine(UpdatePath());
-     }
-
-     bool seenTarget() {
-          if (seenPlayer)
-               return true;
-
-          // Check if enemy has a line of sight to the player
-          //TODO: finish this function
-          return true;
      }
 
      IEnumerator UpdatePath() {
@@ -66,17 +72,15 @@ public class EnemyAI : MonoBehaviour {
 
           // Find a path to the target, then return to OnPathComplete
           seeker.StartPath(transform.position, target.position, OnPathComplete);
-          yield return new WaitForSeconds(1f / updateRate);
+	      yield return new WaitForSeconds(1f / updateRate);
           StartCoroutine(UpdatePath());
      }
 
      public void OnPathComplete(Path p) {
-          //TODO: Add check if enemy has seen the player
-          // Check if the path had an error or not
-          if(!p.error) {
+         if(!p.error) {
                path = p;
                currentWaypoint = 0;
-          }
+         }
      }
 
      void FixedUpdate() {
@@ -86,18 +90,14 @@ public class EnemyAI : MonoBehaviour {
           }
 
           if (path == null)
-               return;
-
-          if (!seenTarget()) {
-               return;
-          }
+               return; 
 
           if (currentWaypoint >= path.vectorPath.Count) {
                if (pathIsEnded)
                     return;
                //Debug.Log("End of path reached.");
                pathIsEnded = true;
-               return;
+	          return;
           }
 
           pathIsEnded = false;
@@ -110,6 +110,32 @@ public class EnemyAI : MonoBehaviour {
           rb.AddForce(dir, fMode);
 
           float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
+
+          if (targetstr != "P") {
+               // Calculate how far away the enemy is from its patrol position
+               float distGoal = Vector3.Distance(transform.position, target.position);
+               //Debug.Log("distGoal: " + distGoal);
+
+               if (targetstr == "A" && distGoal < 0.75) {
+                    targetstr = "B";
+                    target = patrolB;
+                    //Debug.Log("Switching to PatrolB");
+               }
+               else if (targetstr == "B" && distGoal < 0.75) {
+                    targetstr = "A";
+                    target = patrolA;
+                    //Debug.Log("Switching to PatrolA");
+               }
+
+               // Calculate distance to player and switch to following the player if the distance is less than the threshold
+               float distP = Vector3.Distance(transform.position, player.position);
+               //Debug.Log("distP " + distP);
+               if (distP < followThreshold) {
+                    targetstr = "P";
+                    target = player;
+                    Debug.Log("Switching to player");
+               }
+          }
 
           if (dist < nextWaypointDistance) {
                currentWaypoint++;
