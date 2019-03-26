@@ -6,38 +6,53 @@ using UnityEngine;
 public class hole : MonoBehaviour
 {
     public GameObject hole1;
-    public GameObject hole2;
+    public Sprite hide;
+    public Sprite show;
+    private SpriteRenderer spriteRenderer;
+    private BoxCollider2D col;
 
     // Start is called before the first frame update
     void Start()
     {
-      
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite == null)
+        {
+            spriteRenderer.sprite = show;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKeyDown(KeyCode.Q))
-        {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {        // If key is being pressed...
+            ChangeSprite();
+            Invoke("Respawn", 5);
 
-            Destroy(hole1);
-            
+
         }
-       /* if (Input.GetKeyDown(KeyCode.E))
-        {
-            Instantiate(hole2);
-        }*/
-      
-      
+
+
+
     }
-
-  
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void ChangeSprite()
     {
-        /*if (collision.gameObject.tag.Equals("Player"))
+        if (spriteRenderer.sprite == show)
         {
-            Destroy(gameObject);
-        }*/
+            spriteRenderer.sprite = hide;
+            hole1.GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
+    void Respawn()
+    {
+        if (spriteRenderer.sprite == hide)
+        {
+            spriteRenderer.sprite = show;
+            hole1.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        //  Debug.Log("Now feeding Dog");
+
+    }
+ 
+   
 }

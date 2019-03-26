@@ -37,34 +37,28 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Destroy(hole1);
-        }
+      
         Move();
      
 
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Enemy"))
-        {
-           Destroy(gameObject);
-        }
+         if (collision.gameObject.tag.Equals("Enemy"))
+         {
+            Destroy(gameObject);
+         }
 
-    }
     
+    }
+   
 
+    
 
     void Move()
     {
-        /* float h = Input.GetAxis("Horizontal");
-         float v = Input.GetAxis("Vertical");
-         Vector2 movement = new Vector2(h, v);
-         rb.AddForce(movement * speed);
-         rb.gravityScale = 0;
-         */
+       
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         if (inputHorizontal < 0)
         {

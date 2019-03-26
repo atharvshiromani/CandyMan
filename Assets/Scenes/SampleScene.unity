@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 48052192}
   - component: {fileID: 48052191}
   m_Layer: 8
-  m_Name: whitechoco
+  m_Name: whitechoco2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1691,13 +1691,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189755136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cb73859958fcf6489700466ebd1fc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hole1: {fileID: 48052189}
-  hole2: {fileID: 48052189}
+  hole1: {fileID: 886383658}
+  hide: {fileID: 0}
+  show: {fileID: 0}
 --- !u!4 &189755138
 Transform:
   m_ObjectHideFlags: 0
@@ -2657,7 +2658,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hole1: {fileID: 0}
-  hole2: {fileID: 0}
+  hide: {fileID: 0}
+  show: {fileID: 0}
 --- !u!1 &462723976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,7 +3021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.042376757, y: 1.1699996, z: -10}
+  m_LocalPosition: {x: -0.04481101, y: 1.1699996, z: -10}
   m_LocalScale: {x: 1.5, y: 2.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3461,7 +3463,7 @@ GameObject:
   - component: {fileID: 625386382}
   - component: {fileID: 625386381}
   m_Layer: 8
-  m_Name: whitechoco (2)
+  m_Name: whitechoco 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5103,9 +5105,10 @@ GameObject:
   - component: {fileID: 886383661}
   - component: {fileID: 886383660}
   - component: {fileID: 886383659}
+  - component: {fileID: 886383662}
   m_Layer: 8
-  m_Name: whitechoco
-  m_TagString: Untagged
+  m_Name: whitechoco1
+  m_TagString: Hole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5198,6 +5201,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &886383662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886383658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb73859958fcf6489700466ebd1fc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hole1: {fileID: 886383658}
+  hide: {fileID: 0}
+  show: {fileID: 21300000, guid: 94170558b1348624c958a85114bf0110, type: 3}
 --- !u!1 &887963337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,7 +5334,7 @@ GameObject:
   - component: {fileID: 913468504}
   - component: {fileID: 913468503}
   m_Layer: 8
-  m_Name: whitechoco (1)
+  m_Name: whitechoco31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8804,7 +8822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511393282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.042376757, y: 1.1699996, z: -10}
+  m_LocalPosition: {x: -0.04481101, y: 1.1699996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1420815702}
