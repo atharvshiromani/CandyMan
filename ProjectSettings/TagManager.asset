@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Hole
   - Ladder
+  - Path
   layers:
   - Default
   - TransparentFX

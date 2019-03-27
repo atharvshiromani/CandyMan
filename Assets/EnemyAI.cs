@@ -36,6 +36,9 @@ public class EnemyAI : MonoBehaviour {
      // Player tracking during patrolling
      private float followThreshold = 2.5f;
 
+     // Track if enemy is on a ladder
+     public bool onLadder = false;
+
      void Start() {
           seeker = GetComponent<Seeker>();
           rb = GetComponent<Rigidbody2D>();
@@ -105,6 +108,11 @@ public class EnemyAI : MonoBehaviour {
           // Find direction to next waypoint
           Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
           dir *= speed * Time.fixedDeltaTime;
+
+          // If the enemy is not on a ladder, zero out the y component
+          if(!onLadder) {
+               dir.y = 0;
+          }
 
           // Move enemy
           rb.AddForce(dir, fMode);
