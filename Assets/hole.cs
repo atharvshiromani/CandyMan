@@ -6,6 +6,7 @@ using UnityEngine;
 public class hole : MonoBehaviour
 {
     public GameObject hole1;
+    //public GameObject cM;
     public Sprite hide;
     public Sprite show;
     private SpriteRenderer spriteRenderer;
@@ -14,6 +15,7 @@ public class hole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hole1.GetComponent<BoxCollider2D>().enabled = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
         {
@@ -22,19 +24,21 @@ public class hole : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {        // If key is being pressed...
+        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("J key was pressed");
             ChangeSprite();
             Invoke("Respawn", 5);
-
-
+           
+           
         }
-
-
-
     }
+
+
+
+
     void ChangeSprite()
     {
         if (spriteRenderer.sprite == show)
@@ -49,6 +53,7 @@ public class hole : MonoBehaviour
         {
             spriteRenderer.sprite = show;
             hole1.GetComponent<BoxCollider2D>().enabled = true;
+            
         }
         //  Debug.Log("Now feeding Dog");
 
