@@ -6,7 +6,6 @@ using UnityEngine;
 public class hole : MonoBehaviour
 {
     public GameObject hole1;
-    //public GameObject cM;
     public Sprite hide;
     public Sprite show;
     private SpriteRenderer spriteRenderer;
@@ -55,7 +54,6 @@ public class hole : MonoBehaviour
             hole1.GetComponent<BoxCollider2D>().enabled = true;
             
         }
-        //  Debug.Log("Now feeding Dog");
 
     }
  
