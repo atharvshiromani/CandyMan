@@ -34,7 +34,7 @@ public class playerMove : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
       
@@ -47,6 +47,7 @@ public class playerMove : MonoBehaviour
     {
          if (collision.gameObject.tag.Equals("Enemy"))
          {
+            
             Destroy(gameObject);
          }
 
