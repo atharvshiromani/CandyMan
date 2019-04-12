@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class hole : MonoBehaviour
 {
-    public GameObject hole1;
+    public GameObject holeR;
+    public GameObject holeL;
     public Sprite hide;
     public Sprite show;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D col;
+    public playerMove thePlayer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        hole1.GetComponent<BoxCollider2D>().enabled = true;
+        holeR.GetComponent<BoxCollider2D>().enabled = true;
+        holeL.GetComponent<BoxCollider2D>().enabled = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
         {
@@ -27,34 +31,61 @@ public class hole : MonoBehaviour
     {
         if (other.tag == "Player" && Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("J key was pressed");
-            ChangeSprite();
-            Invoke("Respawn", 5);
+            ChangeSpriteL();
+            Invoke("RespawnL", 5);
            
            
         }
-    }
-
-
-
-
-    void ChangeSprite()
-    {
-        if (spriteRenderer.sprite == show)
+        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
-            spriteRenderer.sprite = hide;
-            hole1.GetComponent<BoxCollider2D>().enabled = false;
+
+
+            ChangeSpriteR();
+            Invoke("RespawnR", 5);
+
         }
     }
-    void Respawn()
+
+    void ChangeSpriteR()
+    {
+        spriteRenderer = holeR.GetComponent<SpriteRenderer>();
+
+        spriteRenderer.sprite = hide;
+        holeR.GetComponent<BoxCollider2D>().enabled = false;
+
+    }
+    void ChangeSpriteL()
+    {
+        spriteRenderer = holeL.GetComponent<SpriteRenderer>();
+
+        spriteRenderer.sprite = hide;
+        holeL.GetComponent<BoxCollider2D>().enabled = false;
+
+    }
+
+
+    void RespawnL()
     {
         if (spriteRenderer.sprite == hide)
         {
-            spriteRenderer.sprite = show;
-            hole1.GetComponent<BoxCollider2D>().enabled = true;
+
             
+
+            holeL.GetComponent<SpriteRenderer>().sprite = show;
+            holeL.GetComponent<BoxCollider2D>().enabled = true;
         }
 
+
+    }
+    void RespawnR()
+    {
+
+        if (spriteRenderer.sprite == hide)
+        {
+
+            holeR.GetComponent<SpriteRenderer>().sprite = show;
+            holeR.GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
  
    
