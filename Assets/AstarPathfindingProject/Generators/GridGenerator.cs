@@ -130,7 +130,7 @@ namespace Pathfinding {
 		}
 
 		public override int CountNodes () {
-			return nodes.Length;
+			return nodes != null ? nodes.Length : 0;
 		}
 
 		public override void GetNodes (System.Action<GraphNode> action) {
