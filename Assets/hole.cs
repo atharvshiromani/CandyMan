@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class hole : MonoBehaviour
 {
-    public GameObject holeR;
     public GameObject holeL;
+    public GameObject holeR;
     public Sprite hide;
     public Sprite show;
     private SpriteRenderer spriteRenderer;
