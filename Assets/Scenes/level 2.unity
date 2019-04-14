@@ -9157,7 +9157,7 @@ GameObject:
   - component: {fileID: 443891156}
   m_Layer: 0
   m_Name: A* Graph
-  m_TagString: Path
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
