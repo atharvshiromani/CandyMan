@@ -49,6 +49,7 @@ public class playerMove : MonoBehaviour
     {
        if (collision.gameObject.tag.Equals("Enemy"))
         {
+            SoundManagerScript.PlaySound("deathSound");
             Destroy(gameObject);
            
 

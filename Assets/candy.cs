@@ -13,8 +13,10 @@ public class candy : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            
             ScoreScript.scoreValue += 10;
             Destroy(gameObject);
+            SoundManagerScript.PlaySound("candySound");
 
         }
     }
