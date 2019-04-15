@@ -8,6 +8,8 @@ TagManager:
   - Hole
   - Ladder
   - Path
+  - Death
+  - Floor
   layers:
   - Default
   - TransparentFX

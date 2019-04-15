@@ -43,7 +43,9 @@ public class EnemyAI : MonoBehaviour
     public bool onLadder = false;
 
     public bool noPatrol = false;
+   
 
+   
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -118,6 +120,8 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
+
+       
         if (target == null)
         {
             //Debug.Log("No target set.");

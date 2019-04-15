@@ -21,6 +21,7 @@ public class playerMove : MonoBehaviour
     private float climbVelocity;
     private float gravityScore;
     public GameObject thingbeingdestroyed;
+    public bool inbox;
 
 
     private void Start()
@@ -39,23 +40,27 @@ public class playerMove : MonoBehaviour
     {
       
         Move();
-     
+      
+
 
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-         if (collision.gameObject.tag.Equals("Enemy"))
-         {
-            
+       if (collision.gameObject.tag.Equals("Enemy"))
+        {
             Destroy(gameObject);
-         }
+           
 
-    
+
+        }
+               
     }
-   
 
-    
+  
+
+
+
 
     void Move()
     {
