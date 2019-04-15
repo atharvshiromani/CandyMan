@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: b6085d0599fbd144fb1a2bf74af2ba4d
+  - enabled: 1
+    path: Assets/Scenes/ScoreBoard.unity
+    guid: c47ae736d197d014b93b45755f985455
+  - enabled: 1
+    path: Assets/Scenes/level 3.unity
+    guid: fcad4e59a7ea5914abcdebf8c2982a82
   m_configObjects: {}
