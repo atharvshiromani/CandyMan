@@ -43,9 +43,7 @@ public class EnemyAI : MonoBehaviour
     public bool onLadder = false;
 
     public bool noPatrol = false;
-   
 
-   
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -85,10 +83,14 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(UpdatePath());
     }
 
-    public void respawn() {
-        if(noPatrol) {
+    public void respawn()
+    {
+        if (noPatrol)
+        {
             transform.position = spawn.position;
-        } else {
+        }
+        else
+        {
             targetstr = "B";
             target = patrolB;
             transform.position = patrolA.position;
@@ -121,7 +123,7 @@ public class EnemyAI : MonoBehaviour
     void FixedUpdate()
     {
 
-       
+
         if (target == null)
         {
             //Debug.Log("No target set.");
@@ -185,6 +187,15 @@ public class EnemyAI : MonoBehaviour
                 target = player;
                 Debug.Log("Switching to player");
             }
+        }
+
+        if (dir.x > 0) // moving right so face right
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (dir.x < 0)
+        { // moving left so face left
+            GetComponent<SpriteRenderer>().flipX = true;
         }
 
         if (dist < nextWaypointDistance)
