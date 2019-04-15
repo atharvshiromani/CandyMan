@@ -30,6 +30,6 @@ public class death : MonoBehaviour
 
     void die()
     {
-        Destroy(gameObject);
+        gameObject.GetComponent<EnemyAI>().respawn();
     }
 }
