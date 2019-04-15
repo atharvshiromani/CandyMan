@@ -68,11 +68,11 @@ public class playerMove : MonoBehaviour
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         if (inputHorizontal < 0)
         {
-            sr.flipX = true;
+            sr.flipX = false;
         }
         if (inputHorizontal > 0)
         {
-            sr.flipX = false;
+            sr.flipX = true;
         }
         rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
         if (onLadder)

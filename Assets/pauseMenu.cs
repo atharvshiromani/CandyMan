@@ -9,7 +9,11 @@ public class pauseMenu : MonoBehaviour
 
     public GameObject pausemenu, resumemenu;
     // Start is called before the first frame update
-    
+    private void Start()
+    {
+        Time.timeScale = 1;
+
+    }
 
     // Update is called once per frame
     void Update()
