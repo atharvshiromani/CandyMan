@@ -23,11 +23,15 @@ public class playerMove : MonoBehaviour
     public GameObject thingbeingdestroyed;
     public bool inbox;
 
+    public int curHealth;
+    public int maxHealth = 5;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         gravityScore = rb.gravityScale;
+        curHealth = maxHealth;
     }
     void Awake()
     {
@@ -40,7 +44,17 @@ public class playerMove : MonoBehaviour
     {
       
         Move();
-      
+
+        if (curHealth > maxHealth)
+        {
+            curHealth = maxHealth;
+        }
+
+        if (curHealth <= 0)
+        {
+            Die();
+        }
+
 
 
     }
@@ -51,14 +65,29 @@ public class playerMove : MonoBehaviour
         {
             SoundManagerScript.PlaySound("deathSound");
             Destroy(gameObject);
-           
+            Damage(1);
+
 
 
         }
                
     }
 
-  
+    void Die()
+    {
+        //Application.LoadLevel(Application.loadedLevel);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Damage(int dmg)
+    {
+        curHealth -= dmg;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        
+
+    }
+
+
 
 
 
