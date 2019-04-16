@@ -6,19 +6,25 @@ using UnityEngine.SceneManagement;
 public class newlevl : MonoBehaviour
 {
     [SerializeField] private string newLevel;
-    [SerializeField] private string scoreboard;
+    public GameObject lvlcomplete;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(scoreboard);
-            Invoke("scoreBoard", 5);
+            panelnxtlvl();
+            Invoke("nextlvl", 5);
         }
     }
-
-    private void scoreBoard()
+    public void panelnxtlvl()
     {
-        SceneManager.LoadScene(newLevel);
+        lvlcomplete.SetActive(true);
+
+       // Time.timeScale = 0;
+    }
+    private void nextlvl()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
