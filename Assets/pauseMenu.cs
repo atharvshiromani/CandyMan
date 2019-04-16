@@ -24,6 +24,22 @@ public class pauseMenu : MonoBehaviour
            
         }
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Resume();
+
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            mainMenu();
+
+        }
+
     }
 
    public void Pause()
