@@ -16566,6 +16566,8 @@ MonoBehaviour:
   climbSpeed: 3
   thingbeingdestroyed: {fileID: 0}
   inbox: 0
+  curHealth: 0
+  maxHealth: 5
 --- !u!58 &360271638
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25605,9 +25607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &560570492
 BoxCollider2D:
@@ -29914,9 +29916,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &616447206
 BoxCollider2D:
@@ -48389,9 +48391,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &1000515782
 BoxCollider2D:
@@ -50078,9 +50080,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &1037985858
 BoxCollider2D:
@@ -71452,9 +71454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &1479187093
 BoxCollider2D:
@@ -79073,9 +79075,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &1644335651
 BoxCollider2D:
@@ -89897,9 +89899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeL: {fileID: 0}
-  holeR: {fileID: 0}
+  holeR: {fileID: 1644335647}
   hide: {fileID: 0}
-  show: {fileID: 0}
+  show: {fileID: 21300000, guid: f4ff468224516244fbd79c393cde4a42, type: 3}
   thePlayer: {fileID: 0}
 --- !u!61 &1863844694
 BoxCollider2D:
