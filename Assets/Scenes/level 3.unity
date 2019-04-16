@@ -8193,7 +8193,7 @@ GameObject:
   - component: {fileID: 158502779}
   - component: {fileID: 158502780}
   m_Layer: 0
-  m_Name: chocolate (327)
+  m_Name: enemy3patrola
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10112,7 +10112,7 @@ GameObject:
   - component: {fileID: 206588789}
   - component: {fileID: 206588790}
   m_Layer: 0
-  m_Name: chocolate (117)
+  m_Name: enemy4spawn
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15135,7 +15135,7 @@ GameObject:
   - component: {fileID: 327350940}
   - component: {fileID: 327350941}
   m_Layer: 0
-  m_Name: chocolate (228)
+  m_Name: enemy2patrolb
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16587,7 +16587,7 @@ Transform:
   m_LocalScale: {x: 0.17, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &361503450
 GameObject:
@@ -23965,7 +23965,7 @@ GameObject:
   - component: {fileID: 526356979}
   - component: {fileID: 526356978}
   m_Layer: 0
-  m_Name: enemy (4)
+  m_Name: enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24028,8 +24028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 360271641}
-  patrolA: {fileID: 0}
-  patrolB: {fileID: 0}
+  patrolA: {fileID: 1357888182}
+  patrolB: {fileID: 327350940}
   spawn: {fileID: 0}
   updateRate: 2
   speed: 600
@@ -24037,7 +24037,7 @@ MonoBehaviour:
   pathIsEnded: 0
   nextWaypointDistance: 1
   onLadder: 0
-  noPatrol: 1
+  noPatrol: 0
 --- !u!114 &526356982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24143,7 +24143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526356977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.05, y: -2.53, z: 0}
+  m_LocalPosition: {x: 17.79, y: -2.61, z: 0}
   m_LocalScale: {x: 0.12551653, y: 0.124884985, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25737,7 +25737,7 @@ GameObject:
   - component: {fileID: 569405705}
   - component: {fileID: 569405704}
   m_Layer: 0
-  m_Name: enemy (3)
+  m_Name: enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25800,8 +25800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 360271641}
-  patrolA: {fileID: 0}
-  patrolB: {fileID: 0}
+  patrolA: {fileID: 1371412130}
+  patrolB: {fileID: 1112516054}
   spawn: {fileID: 0}
   updateRate: 2
   speed: 600
@@ -25809,7 +25809,7 @@ MonoBehaviour:
   pathIsEnded: 0
   nextWaypointDistance: 1
   onLadder: 0
-  noPatrol: 1
+  noPatrol: 0
 --- !u!114 &569405708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25915,7 +25915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569405703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.05, y: -2.33, z: 0}
+  m_LocalPosition: {x: -6.23, y: -9.18, z: 0}
   m_LocalScale: {x: 0.12551653, y: 0.124884985, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32386,7 +32386,7 @@ GameObject:
   - component: {fileID: 671075263}
   - component: {fileID: 671075262}
   m_Layer: 0
-  m_Name: enemy (5)
+  m_Name: enemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32449,8 +32449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 360271641}
-  patrolA: {fileID: 0}
-  patrolB: {fileID: 0}
+  patrolA: {fileID: 158502779}
+  patrolB: {fileID: 1771871331}
   spawn: {fileID: 0}
   updateRate: 2
   speed: 600
@@ -32458,7 +32458,7 @@ MonoBehaviour:
   pathIsEnded: 0
   nextWaypointDistance: 1
   onLadder: 0
-  noPatrol: 1
+  noPatrol: 0
 --- !u!114 &671075266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32564,7 +32564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671075261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.16, y: -2.03, z: 0}
+  m_LocalPosition: {x: 6.21, y: 6.77, z: 0}
   m_LocalScale: {x: 0.12551653, y: 0.124884985, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49950,6 +49950,207 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1056799936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056799944}
+  - component: {fileID: 1056799943}
+  - component: {fileID: 1056799942}
+  - component: {fileID: 1056799941}
+  - component: {fileID: 1056799940}
+  - component: {fileID: 1056799939}
+  - component: {fileID: 1056799938}
+  - component: {fileID: 1056799937}
+  m_Layer: 0
+  m_Name: enemy4
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1056799937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10097ccf3bbf70d4b8cacb0ae0c87375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1056799938
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.55, y: -1.6}
+  serializedVersion: 2
+  m_Radius: 1.7982086
+--- !u!58 &1056799939
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.0547007}
+  serializedVersion: 2
+  m_Radius: 1.3514062
+--- !u!114 &1056799940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11878eb0ad9a943479b0f5e887ed7f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 360271641}
+  patrolA: {fileID: 0}
+  patrolB: {fileID: 0}
+  spawn: {fileID: 206588789}
+  updateRate: 2
+  speed: 600
+  fMode: 0
+  pathIsEnded: 0
+  nextWaypointDistance: 1
+  onLadder: 0
+  noPatrol: 1
+--- !u!114 &1056799941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: 1
+--- !u!50 &1056799942
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 2
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!212 &1056799943
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 1fab88a20cc62084e998195224a52339, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.11, y: 2.1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1056799944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056799936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.93, y: -8.91, z: 0}
+  m_LocalScale: {x: 0.12551653, y: 0.124884985, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057153364
 GameObject:
   m_ObjectHideFlags: 0
@@ -52944,7 +53145,7 @@ GameObject:
   - component: {fileID: 1112516054}
   - component: {fileID: 1112516055}
   m_Layer: 0
-  m_Name: chocolate (77)
+  m_Name: enemy1patrolb
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63209,7 +63410,7 @@ GameObject:
   - component: {fileID: 1357888182}
   - component: {fileID: 1357888183}
   m_Layer: 0
-  m_Name: chocolate (212)
+  m_Name: enemy2patrola
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64135,7 +64336,7 @@ GameObject:
   - component: {fileID: 1371412130}
   - component: {fileID: 1371412131}
   m_Layer: 0
-  m_Name: chocolate (46)
+  m_Name: enemy1patrola
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82495,7 +82696,7 @@ GameObject:
   - component: {fileID: 1771871331}
   - component: {fileID: 1771871332}
   m_Layer: 0
-  m_Name: chocolate (351)
+  m_Name: enemy3patrolb
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
